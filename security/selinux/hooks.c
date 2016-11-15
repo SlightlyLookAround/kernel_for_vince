@@ -1453,7 +1453,7 @@ static int inode_doinit_with_dentry(struct inode *inode, struct dentry *opt_dent
 			 * inode_doinit with a dentry, before these inodes could
 			 * be used again by userspace.
 			 */
-			goto out_invalid;
+			goto out;
 		}
 
 		len = INITCONTEXTLEN;
@@ -1562,7 +1562,7 @@ static int inode_doinit_with_dentry(struct inode *inode, struct dentry *opt_dent
 			 * could be used again by userspace.
 			 */
 			if (!dentry)
-				goto out_invalid;
+				goto out;
 			rc = selinux_genfs_get_sid(dentry, sclass,
 						   sbsec->flags, &sid);
 			dput(dentry);
@@ -1579,6 +1579,7 @@ out:
 			isec->initialized = LABEL_INVALID;
 			goto out_unlock;
 		}
+
 		isec->initialized = LABEL_INITIALIZED;
 		isec->sid = sid;
 	}
