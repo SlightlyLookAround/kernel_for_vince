@@ -92,8 +92,8 @@ export ARCH=arm64
 export SUBARCH=arm64
 
 # Clang Setup
-export CLANG_TRIPLE=aarch64-linux-gnu-
-export CC=$PWD/Clang/bin/clang
+# export CLANG_TRIPLE=aarch64-linux-gnu-
+# export CC=$PWD/Clang/bin/clang
 
 # Cross Compiler Setup
 export CROSS_COMPILE="$PWD/Toolchain/bin/aarch64-elf-"
@@ -117,7 +117,7 @@ export BUILD_TYPE="WHAT"
 
 # Compiler Need Python
 
-ln -s /usr/bin/python2 /usr/bin/python
+# ln -s /usr/bin/python2 /usr/bin/python
 
 # Telegram Stuff 
 
@@ -133,7 +133,7 @@ tg_channelcast "<b>Nito Kernel $VERSION_TG</b> new build!" \
 # Clone Toolchain
 git clone https://github.com/arter97/arm64-gcc --depth=1 Toolchain
 # git clone https://github.com/arter97/arm32-gcc --depth=1 Toolchain-32
-git clone https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6443078 --depth=1 Clang
+# git clone https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6443078 --depth=1 Clang
 
 # Customize Compiler Name
 export KBUILD_COMPILER_STRING=$($CC --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
