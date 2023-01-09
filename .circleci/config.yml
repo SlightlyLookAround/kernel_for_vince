@@ -1,0 +1,9 @@
+jobs: 
+   build: 
+     docker: 
+       - image: 31482281/ubuntu:latest 
+     steps: 
+       - checkout 
+       - run: 
+          name: Reeeeeeee
+          command: bash ci.sh
