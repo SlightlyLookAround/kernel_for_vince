@@ -91,23 +91,23 @@ export BUILD_START=$(date "+%s")
 
 # Customize Build Host and User
 export KBUILD_BUILD_USER="Keternal"
-export KBUILD_BUILD_HOST="FallenLeaves"
+export KBUILD_BUILD_HOST="Explorer"
 
 # Defind Kernel Binary
 export IMG=${PWD}/out/arch/arm64/boot/Image.gz-dtb
 
 # Used for Telegram
-export VERSION_TG="Forever 2023"
-export ZIP_VERSION="FOREVER"
-export BUILD_TYPE="RELEASE"
+export VERSION_TG="Explorer 2023"
+export ZIP_VERSION="EXPLORER"
+export BUILD_TYPE="INDEVELOP"
 
 # Telegram Stuff
 
 tg_sendstick
 
 tg_channelcast "<b>Nito Kernel $VERSION_TG</b> new build!" \
-		"Stage: <b>Final</b>" \
-		"From <b>Nito Kernel GP</b>" \
+		"Stage: <b>Ongoing</b>" \
+		"From <b>Nito Kernel GF</b>" \
 		"Under commit <b>$(git log --pretty=format:'%h' -1)</b>"
 
 # Clone Toolchain
