@@ -798,7 +798,7 @@ static struct notifier_block clock_panic_notifier = {
 	.priority = 1,
 };
 
-static unsigned long pwrcl_boot_rate = 883200000;
+static unsigned long pwrcl_boot_rate = 960000000;
 
 static int clock_cpu_probe(struct platform_device *pdev)
 {
