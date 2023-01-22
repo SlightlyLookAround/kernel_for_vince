@@ -87,11 +87,11 @@ int vfs_fstat(unsigned int fd, struct kstat *stat)
 }
 EXPORT_SYMBOL(vfs_fstat);
 
-extern int ksu_handle_stat(int *dfd, const char __user **filename_user, int *flags);
+extern int ksu_handle_stat(int *dfd, const char __user **filename_user, int *flag);
 int vfs_fstatat(int dfd, const char __user *filename, struct kstat *stat,
 		int flag)
 {
-	ksu_handle_stat(&dfd, &filename, &flags);
+	ksu_handle_stat(&dfd, &filename, &flag);
 	struct path path;
 	int error = -EINVAL;
 	unsigned int lookup_flags = 0;
