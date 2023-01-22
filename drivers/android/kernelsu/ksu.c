@@ -314,7 +314,7 @@ int __init kernelsu_init(void)
 
 	ksu_uid_observer_init();
 
-	enable_sucompat();
+//	enable_sucompat();
 
 	return 0;
 }
