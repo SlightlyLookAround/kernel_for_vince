@@ -77,5 +77,6 @@
 		qcom,mdss-pan-physical-width-dimension = <69>;
 		qcom,mdss-pan-physical-height-dimension = <122>;
 		qcom,ulps-enabled;
+		qcom,suspend-ulps-enabled;
 	};
 };

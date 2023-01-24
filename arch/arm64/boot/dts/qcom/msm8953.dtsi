@@ -923,6 +923,7 @@
 		clocks = <&clock_gcc clk_xo_a_clk_src>;
 		clock-names = "xo_a";
 		qcom,num-clusters = <2>;
+		qcom,enable-qos;
 		qcom,speed0-bin-v0-cl =
 			<          0 0>,
 			<  652800000 1>,
@@ -1012,16 +1013,16 @@
 				"cpu3_clk", "cpu4_clk", "cpu5_clk",
 				"cpu6_clk", "cpu7_clk";
 		clocks = <&clock_cpu clk_cci_clk>,
-			 <&clock_cpu clk_a53_pwr_clk>,
-			 <&clock_cpu clk_a53_pwr_clk>,
-			 <&clock_cpu clk_a53_pwr_clk>,
-			 <&clock_cpu clk_a53_pwr_clk>,
-			 <&clock_cpu clk_a53_pwr_clk>,
-			 <&clock_cpu clk_a53_pwr_clk>,
-			 <&clock_cpu clk_a53_pwr_clk>,
-			 <&clock_cpu clk_a53_pwr_clk>,
-			 <&clock_cpu clk_a53_pwr_clk>,
-			 <&clock_cpu clk_a53_pwr_clk>;
+			 <&clock_cpu clk_a53_perf_clk>,
+			 <&clock_cpu clk_a53_perf_clk>,
+			 <&clock_cpu clk_a53_perf_clk>,
+			 <&clock_cpu clk_a53_perf_clk>,
+			 <&clock_cpu clk_a53_perf_clk>,
+			 <&clock_cpu clk_a53_perf_clk>,
+			 <&clock_cpu clk_a53_perf_clk>,
+			 <&clock_cpu clk_a53_perf_clk>,
+			 <&clock_cpu clk_a53_perf_clk>,
+			 <&clock_cpu clk_a53_perf_clk>;
 
 		qcom,cpufreq-table =
 			 <  652800 >,
